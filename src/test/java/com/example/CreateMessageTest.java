@@ -76,7 +76,8 @@ public class CreateMessageTest {
     public void createMessageMessageTextBlank() throws IOException, InterruptedException {
     	String json = "{\"postedBy\":9999,\"messageText\": \"\",\"timePostedEpoch\": 1669947792}";
         HttpRequest postMessageRequest = HttpRequest.newBuilder()
-                .uri(URI.create("http://localhost:8080/messages"))
+           
+        .uri(URI.create("http://localhost:8080/messages"))
                 .POST(HttpRequest.BodyPublishers.ofString(json))
                 .header("Content-Type", "application/json")
                 .build();
